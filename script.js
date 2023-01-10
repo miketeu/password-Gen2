@@ -90,16 +90,19 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  
 
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+
 }
 
 // Function to generate password with user input
 function generatePassword() {
+
 
 }
 
@@ -116,6 +119,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+
+
 // js for the modal.
 //Call the modal.
 var modal = document.getElementById("choicesModal");
