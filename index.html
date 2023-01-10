@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <div class="card-footer">
+          <!--This text and button included to invite the user to open the modal where they can select lenth of password and change which character set to use.-->
+
+          <h3>
+            Use the 'Choose length and content' button to choose the length of
+            your password and which character set you would like to include.
+          </h3>
+          <button id="choices" class="btn">Choose length and content.</button>
+
+          <h3>
+            When you have made your choices, click the 'Generate Password'
+            button to view your new password.
+          </h3>
+
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <!--This section will contain the HTML components of the modal-->
+      <div id="choicesModal" class="modal">
+        <!--Modal content-->
+        <div class="modal-content">
+          <br />
+          <!--Form-->
+          <h3>
+            You can choose to change the default length of your password by
+            selecting a different length here.
+          </h3>
+          <!-- The form for the collection of data (length of password, which arrays to include)-->
+          <form action="">
+            <fieldset>
+              <legend class="legend">Password length.</legend>
+              <label for="length"
+                >Enter a number between 10 and 64 to determine the length of
+                your new password.</label
+              >
+              <br />
+              <!-- Password length-->
+              <input
+                type="number"
+                id="pwLength"
+                name="pwLength"
+                class="lengthInput"
+                min="10"
+                max="64"
+              />
+              <br />
+              <br />
+            </fieldset>
+            <!-- Choose arrays-->
+
+            <br />
+            <br />
+
+            <fieldset>
+              <legend class="legend">Select your choice of characters.</legend>
+              <form>
+
+                <br />
+                <br>
+                Or select your choice below.
+                <br>
+                <br>
+
+                <input type="radio" id="special" name="choice" value="" />
+
+                <label for="special"
+                  >Special Character('@', '%', '+',etc.)</label
+                >
+                <br />
+
+                <input type="radio" id="numerical" name="choice" value="" />
+                <label for="numerical">Numerical (1,2,3,4 etc.)</label>
+                <br />
+
+                <input type="radio" id="lower" name="choice" value="" />
+                <label for="">Lower Case(a,b,c,d, etc.)</label>
+                <br />
+
+                <input type="radio" id="upper" name="choice" value="mail" />
+                <label for="upper">Upper Case(A, B, C, D, etc)</label>
+              </form>
+              <br /><br />
+              <button id="viewButton" class="confirmChoice">
+                Click here to confirm your choices.
+              </button>
+            </fieldset>
+          </form>
+
+          <button class="close">
+            <span> CANCEL &times; </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
